@@ -1,0 +1,45 @@
+{
+	"ProjectConfigOptions": {
+		"ApiSecurity": {
+			"Enable": true
+		},
+		"Domain": {
+			"IpAddress": "127.0.0.1",
+			"Port": 20101
+		},
+		"Consul": {
+			"Enable": true,
+			"Protocol": "Http",
+			"ConsulName": "OdinCore-pro",
+			"ConsulIpAddress": "127.0.0.1",
+			"ConsulPort": 20101,
+			"DataCenter": "dc1",
+			"Weight": 100,
+			"ConsulCheck": {
+				"DeregisterCriticalServiceAfter": 5, // 多久后注销服务
+				"HealthApi": "http://127.0.0.1:20101/api/health", // 健康检查api
+				"Interval": 10, // 心跳时间
+				"Timeout": 5 // 超时时间
+			}
+		},
+		"DbEntity": {
+			"DatabaseName": "db_odinCore",
+			"ConnectionString": "Server=127.0.0.1;database=db_odinCore;uid=root;pwd=173djjDJJ~",
+			"InitDb": true
+		},
+		"MongoDb": {
+			"Enable": true,
+			"MongoConnection": "mongodb://odin:173mongodbodincore~@127.0.0.1:27017/?authSource=odincore",
+			"Database": "odinCore"
+		},
+		"Redis": {
+			"Enable": true,
+			"RedisIp": "127.0.0.1",
+			"RedisPort": 6379,
+			"RedisPassword": "173redis~",
+			"DefaultDatabase": 0,
+			"Connection": "127.0.0.1,abortConnect=false,password=173redis~,defaultdatabase=1",
+			"InstanceName": "odin:core_"
+		}
+	}
+}

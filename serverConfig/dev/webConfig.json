@@ -1,0 +1,26 @@
+{
+    "ProjectConfigOptions": {
+        "ApiSecurity": {
+            "Enable": true
+        },
+        "DbEntity": {
+            "DatabaseName": "db_odinCore",
+            "ConnectionString": "Server=121.42.15.95;database=db_odinIds;uid=root;pwd=173mysqlodincore~;ConvertZeroDatetime=True;AllowZeroDatetime=True",
+            "InitDb": true
+        },
+        "MongoDb": {
+            "Enable": true,
+            "MongoConnection": "mongodb://odin:173mongodbodincore~@121.42.15.95:27017/?authSource=odincore",
+            "Database": "odincore"
+        },
+        "Redis": {
+            "Enable": true,
+            "RedisIp": "121.42.15.95",
+            "RedisPort": 6379,
+            "RedisPassword": "173redis~",
+            "DefaultDatabase": 0,
+            "Connection": "121.42.15.95,abortConnect=false,password=173redis~,defaultdatabase=1",
+            "InstanceName": "odin:core_"
+        }
+    }
+}

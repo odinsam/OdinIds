@@ -1,0 +1,82 @@
+{
+	"ProjectConfigOptions": {
+		"RabbitMQ": {
+			"Account": {
+				"UserName": "odinrabbitmq",
+				"Password": "173rabbitmq~"
+			},
+			"VirtualHost": "/",
+			"Port": 5672,
+			"HostNames": ["127.0.0.1"],
+			"Exchanges": [
+				{
+					"ExchangeName": "",
+					"ExchangeType": "",
+					"Durability": true,
+					"AutoDelete": false,
+					"Arguments": {
+						"KeyName": "alternate-exchange",
+						"Value": "",
+						"ValueType": "string"
+					},
+					"Queues": [
+						{
+							"QueuesName": "Name",
+							"Durability": true,
+							"RoutingKey": "",
+							"AutoDelete": false,
+							"Exclusive": false,
+							"Arguments": [
+								{
+									"KeyName": "x-message-ttl",
+									"Value": "0",
+									"ValueType": "int"
+								},
+								{
+									"KeyName": "x-expires",
+									"Value": "0",
+									"ValueType": "int"
+								},
+								{
+									"KeyName": "x-max-length",
+									"Value": "0",
+									"ValueType": "int"
+								},
+								{
+									"KeyName": "x-max-length-bytes",
+									"Value": "0",
+									"ValueType": "int"
+								},
+								{
+									"KeyName": "x-max-priority",
+									"Value": "0",
+									"ValueType": "int"
+								},
+								{
+									"KeyName": "x-dead-letter-exchange",
+									"Value": "",
+									"ValueType": "string"
+								},
+								{
+									"KeyName": "x-dead-letter-routing-key",
+									"Value": "",
+									"ValueType": "string"
+								},
+								{
+									"KeyName": "x-queue-mode",
+									"Value": "lazy",
+									"ValueType": "string"
+								},
+								{
+									"KeyName": "x-queue-master-locator",
+									"Value": "",
+									"ValueType": "string"
+								}
+							]
+						}
+					]
+				}
+			]
+		}
+	}
+}
